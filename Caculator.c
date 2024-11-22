@@ -14,6 +14,7 @@ int main(){
     printf("\nEnter the operation you want to performe: ");
     scanf(" %c", &op);
     
+    
     //condition section
 
     switch (op){
@@ -30,8 +31,13 @@ int main(){
         printf("%.2lf", rslt);
         break;
     case'/':
-        rslt=(num1*num2);
-        printf("%.2lf", rslt);
+        if (num1!=0 && num2!=0){
+            rslt=(num1*num2);
+            printf("%.2lf", rslt);
+        }
+        else{
+            printf("Invalid input you can't divide a number by zero.");
+        }
         break;
         default:
         printf("\nYou have entered invalid input");
