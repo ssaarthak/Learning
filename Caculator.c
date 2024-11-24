@@ -1,25 +1,31 @@
+// Including all needed preprocessors
+
 #include <stdio.h>
 # include <string.h>
+
 int main(){
-// Variable & Arrays Section
+    
+// Decelration of all needed varibales and strings
 
     double num1, num2, rslt;
     char op;
     char ch[4];
 
-// Input Section
+// Taking input from the user and putting them in the right varibales and strings
     
     printf("Enter the first number: ");
     scanf("%lf", &num1);
     printf("\nEnter the second number: ");
     scanf("%lf", &num2);
 
-// Continuous Calculations & Condition Section
-
+// Added a continues calculation using do while loop so if the user wants to do other operation can do it as well in one go
 
     do{
         printf("\nEnter the operation you want to performe: ");
-        scanf(" %c", &op);    
+        scanf(" %c", &op);
+    
+// Used a switch case to do the needful as the user asked for
+        
         switch (op){
             case'+':
                 rslt=(num1+num2);
@@ -46,6 +52,9 @@ int main(){
                 printf("\nYou have entered invalid input");
                 break;
         }
+        
+//Taking input from the user if he/she wants to do more operation on the number
+        
         printf("\n\nDo you want to perform more operations? (yes/Yes): ");
         scanf("%s", &ch);
     }
